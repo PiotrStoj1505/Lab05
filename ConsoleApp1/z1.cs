@@ -93,20 +93,20 @@ class Program
 
 public class Person
 {
-    // Właściwości
+    
     public string FirstName { get; set; }
     public string LastName { get; set; }
     public DateTime BirthDate { get; set; }
     public string EmailAddress { get; set; }
 
-    // Konstruktor
+    
     public Person(string firstName, string lastName)
     {
         FirstName = firstName;
         LastName = lastName;
     }
 
-    // Konstruktor rozszerzony
+    
     public Person(string firstName, string lastName, DateTime birthDate)
     {
         FirstName = firstName;
@@ -114,13 +114,13 @@ public class Person
         BirthDate = birthDate;
     }
 
-    // Metoda zwracająca pełne imię i nazwisko
+    
     public string GetFullName()
     {
         return $"{FirstName} {LastName}";
     }
 
-    // Metoda zwracająca wiek
+    
     public int GetAge()
     {
         int age = DateTime.Now.Year - BirthDate.Year;
@@ -128,7 +128,7 @@ public class Person
         return age;
     }
 
-    // Metoda sprawdzająca, czy osoba jest dorosła
+    
     public bool IsAdult()
     {
         return GetAge() >= 18;
